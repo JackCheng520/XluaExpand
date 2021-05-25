@@ -1,0 +1,43 @@
+﻿----------CLASS DEFINE BEGIN----------
+---@field BgImage UnityEngine.UI.Image
+---@field ConfirmButton[1] UnityEngine.UI.Button
+---@field ConfirmText UnityEngine.UI.Text
+---@field CancelButton UnityEngine.UI.Button
+---@field CancelText UnityEngine.UI.Text
+---@field ConfirmButton[2] UnityEngine.UI.Button
+---@field ConfirmText UnityEngine.UI.Text
+---@class TestUI : Base
+----------CLASS DEFINE END----------
+
+local testUIStaticDef = {}
+TestUI = testUIStaticDef;
+TestUI.id = 1
+function TestUI.Test()
+	TestUI.id = TestUI.id + 1;
+	print("TestUI.id = " ,TestUI.id)
+end
+
+local testUIInstanceDef = {}
+TestUI = testUIInstanceDef;
+
+function TestUI:Awake()
+	print("Test Awake");
+end
+
+function TestUI:Start()
+	print(inspect(self))
+	print("Test Start");
+	self.ConfirmText.text = "Confirm";
+	self.CancelText.text = "Cancel";
+
+	self.ConfirmButton[1].onClick:AddListener(function()
+		print("click confirm button1")
+	end)
+
+end
+
+function TestUI:Update()
+	print("Test Update")
+end
+
+TestUI = Class(CS.UnityEngine.Object,testUIStaticDef,testUIInstanceDef)

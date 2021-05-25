@@ -1,0 +1,42 @@
+LUA: <1>{
+  BgImage = <userdata 1>,
+  CancelButton = <userdata 2>,
+  CancelText = <userdata 3>,
+  ConfirmButton = { <userdata 4>, <userdata 5> },
+  ConfirmText = <userdata 6>,
+  Test = <function 1>,
+  __class = {
+    Awake = <function 2>,
+    Start = <function 3>,
+    Update = <function 4>
+  },
+  gameObject = <userdata 7>,
+  id = 1,
+  instID = -31748,
+  scriptName = "TestUI",
+  self = <table 1>,
+  transform = <userdata 8>,
+  <metatable> = {
+    __call = <function 5>,
+    __index = {
+      Destroy = <function 6>,
+      DestroyImmediate = <function 7>,
+      DestroyObject = <function 8>,
+      DontDestroyOnLoad = <function 9>,
+      FindObjectOfType = <function 10>,
+      FindObjectsOfType = <function 11>,
+      FindObjectsOfTypeAll = <function 12>,
+      FindObjectsOfTypeIncludingAssets = <function 13>,
+      FindSceneObjectsOfType = <function 14>,
+      Instantiate = <function 15>,
+      UnderlyingSystemType = <userdata 9>,
+      <metatable> = {
+        __call = <function 16>,
+        __index = <function 17>,
+        __newindex = <function 18>
+      }
+    }
+  }
+}
+UnityEngine.Debug:Log (object)
+XLua.StaticLuaCallbacks:Print (intptr) (at Assets/XLua/Src/StaticLuaCallbacks.cs:629)

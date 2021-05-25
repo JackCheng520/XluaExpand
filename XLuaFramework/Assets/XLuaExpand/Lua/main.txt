@@ -1,0 +1,25 @@
+---------------------------------------------------------------------
+-- xLua (C) CompanyName, All Rights Reserved
+-- Created by: AuthorName
+-- Date: 2021-05-13 18:29:24
+---------------------------------------------------------------------
+
+-- To edit this template in: Data/Config/Template.lua
+-- To disable this template, check off menuitem: Options-Enable Template File
+
+---@class main
+require("Class")
+require("Game")
+inspect = require("inspect")
+function main()
+	local game = Game()
+	game:Start("game");
+	game:ToString();
+	--for key,value in pairs(_G['xlua']) do
+	--	print(string.format("[###G Table##] key = %s, value = %s",key,value));
+	--end
+
+	print(inspect.inspect(game))
+end
+
+main();
